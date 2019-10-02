@@ -1,6 +1,17 @@
 import React from 'react'
 
-export default props =>
-    <button onClick={ () => console.log('click!')}>
+export default class SoundButton extends React.Component {
+  render () {
+    return <div>
+      <audio ref={element => { this.audioElement = element }}>
+        <source src={ this.props.src }/>
+      </audio>
+      <button onClick={ () => {
+        console.log('click!')
+        this.audioElement.play()
+      }}>
         hello
-    </button>
+      </button>
+    </div>
+  }
+}
