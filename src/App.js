@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import SoundButton from './SoundButton';
+import React from 'react'
+import './App.css'
+import SoundButton from './SoundButton'
 
 function App () {
   return (
