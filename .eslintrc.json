@@ -18,7 +18,7 @@
         "no-unreachable": "warn",
         "indent": "warn",
         "space-infix-ops": "warn",
-        "standard/object-curly-even-spacing": "warn",
+        "object-curly-spacing": "warn",
         "standard/array-bracket-even-spacing": "warn",
         "react/prop-types": "off",
         "space-before-function-paren": "warn",
