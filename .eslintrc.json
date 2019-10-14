@@ -19,6 +19,8 @@
         "indent": "warn",
         "space-infix-ops": "warn",
         "object-curly-spacing": "warn",
+        "object-property-newline": "warn",
+        "object-curly-newline": "warn",
         "standard/array-bracket-even-spacing": "warn",
         "react/prop-types": "off",
         "space-before-function-paren": "warn",
