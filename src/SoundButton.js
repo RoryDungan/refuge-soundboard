@@ -1,5 +1,8 @@
 import React from 'react'
 
+/**
+ * Button that plays a sound.
+ */
 export default class SoundButton extends React.Component {
   constructor (props) {
     super(props)
