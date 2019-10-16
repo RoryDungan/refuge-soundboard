@@ -20,7 +20,6 @@ export default class SoundButton extends React.Component {
           ? 'green' : 'gray'
       }}
       onClick={() => {
-        console.log('click!')
         this.props.play()
       }} >
     </div>

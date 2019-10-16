@@ -1,13 +1,28 @@
 import React from 'react'
 
 import SoundButton, { ButtonStates } from './SoundButton'
+import sounds from './sounds.json'
 
-const tracks = [
-  ['XXYYXX - XXYYXX - 01 About You.mp3', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav'],
-  ['XXYYXX - XXYYXX - 02 Good Enough.mp3', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav'],
-  ['Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav'],
-  ['Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav']
-]
+const separateIntoChunks = (chunkSize, arr) => {
+  if (chunkSize <= 0) {
+    throw new Error('chunkSize must be a positive integer')
+  }
+
+  const numChunks = Math.ceil(arr.length / chunkSize)
+  const result = []
+  for (let i = 0; i < numChunks; i++) {
+    result.push(arr.slice(i * chunkSize, i * chunkSize + chunkSize))
+  }
+  return result
+}
+
+const tracks = separateIntoChunks(5, sounds.map(s => s.src))
+// const tracks = [
+//   ['XXYYXX - XXYYXX - 01 About You.mp3', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav'],
+//   ['XXYYXX - XXYYXX - 02 Good Enough.mp3', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav'],
+//   ['Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav'],
+//   ['Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav']
+// ]
 
 export default class SoundBoard extends React.Component {
   constructor (props) {
@@ -23,7 +38,7 @@ export default class SoundBoard extends React.Component {
   }
 
   playAudio (src) {
-    this.audioElement.src = src
+    this.audioElement.src = 'final-aac/' + src
     this.setState({
       ...this.state,
       activeTrack: src,
@@ -62,8 +77,8 @@ export default class SoundBoard extends React.Component {
         }
       />
 
-    const createButtonRow = srcs =>
-      <div style={{ display: 'flex '}}>
+    const createButtonRow = (srcs, id) =>
+      <div key={id} style={{ display: 'flex '}}>
         {srcs.map(createSoundButton)}
       </div>
 
