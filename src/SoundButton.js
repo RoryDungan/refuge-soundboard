@@ -1,53 +1,28 @@
 import React from 'react'
 
+export const ButtonStates = Object.freeze({
+  inactive: 0,
+  loading: 1,
+  playing: 2
+})
+
 /**
  * Button that plays a sound.
  */
 export default class SoundButton extends React.Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      playing: false
-    }
-
-    this.onPlaybackFinished = this.onPlaybackFinished.bind(this)
-  }
-
   render () {
     return <div
       className='bp3-card bp3-elevation-1 bp3-interactive'
       style={{
         flex: '1 1 auto',
         margin: '10px',
-        backgroundColor: this.state.playing ? 'green' : 'gray'
+        backgroundColor: this.props.state === ButtonStates.playing
+          ? 'green' : 'gray'
       }}
-      onClick={ () => {
+      onClick={() => {
         console.log('click!')
-        this.audioElement.play()
-        this.setState({ ...this.state, playing: true })
+        this.props.play()
       }} >
-      <audio ref={element => {
-        if (!element) {
-          return
-        }
-
-        this.audioElement = element
-      }}>
-        <source src={ this.props.src }/>
-      </audio>
     </div>
-  }
-
-  componentDidMount () {
-    this.audioElement.addEventListener('ended', this.onPlaybackFinished)
-  }
-
-  componentWillUnmount () {
-    this.audioElement.removeEventListener('ended', this.onPlaybackFinished)
-  }
-
-  onPlaybackFinished () {
-    this.setState({ ...this.state, playing: false })
   }
 }
