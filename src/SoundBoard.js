@@ -38,15 +38,25 @@ export default class SoundBoard extends React.Component {
   }
 
   playAudio (src) {
-    this.audioElement.src = 'final-aac/' + src
-    this.setState({
-      ...this.state,
-      activeTrack: src,
-      loading: true
-    })
-    this.audioElement.pause()
-    this.audioElement.load()
-    this.audioElement.play()
+    if (this.state.activeTrack === src) {
+      this.audioElement.pause()
+      this.audioElement.load()
+      this.setState({
+        ...this.state,
+        activeTrack: '',
+        loading: false
+      })
+    } else {
+      this.audioElement.src = 'final-aac/' + src
+      this.setState({
+        ...this.state,
+        activeTrack: src,
+        loading: true
+      })
+      this.audioElement.pause()
+      this.audioElement.load()
+      this.audioElement.play()
+    }
   }
 
   onLoadingFinished () {
@@ -78,7 +88,7 @@ export default class SoundBoard extends React.Component {
       />
 
     const createButtonRow = (srcs, id) =>
-      <div key={id} style={{ display: 'flex '}}>
+      <div key={id} style={{ display: 'flex ' }}>
         {srcs.map(createSoundButton)}
       </div>
 
