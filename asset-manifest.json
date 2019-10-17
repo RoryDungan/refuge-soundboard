@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.649456db.chunk.css",
-    "main.js": "/static/js/main.bcb04179.chunk.js",
-    "main.js.map": "/static/js/main.bcb04179.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.922c8d7a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.922c8d7a.js.map",
-    "static/css/2.88e778c6.chunk.css": "/static/css/2.88e778c6.chunk.css",
-    "static/js/2.ebfa1abc.chunk.js": "/static/js/2.ebfa1abc.chunk.js",
-    "static/js/2.ebfa1abc.chunk.js.map": "/static/js/2.ebfa1abc.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.071b4e593b4c523eb66f49d35fc07cbe.js": "/precache-manifest.071b4e593b4c523eb66f49d35fc07cbe.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.88e778c6.chunk.css.map": "/static/css/2.88e778c6.chunk.css.map",
-    "static/css/main.649456db.chunk.css.map": "/static/css/main.649456db.chunk.css.map",
-    "static/media/blueprint-icons.css": "/static/media/icons-20.90247cfd.ttf"
+    "main.css": "/refuge-soundboard/static/css/main.649456db.chunk.css",
+    "main.js": "/refuge-soundboard/static/js/main.e3f9a8e0.chunk.js",
+    "main.js.map": "/refuge-soundboard/static/js/main.e3f9a8e0.chunk.js.map",
+    "runtime~main.js": "/refuge-soundboard/static/js/runtime~main.a9a65a14.js",
+    "runtime~main.js.map": "/refuge-soundboard/static/js/runtime~main.a9a65a14.js.map",
+    "static/css/2.990444bb.chunk.css": "/refuge-soundboard/static/css/2.990444bb.chunk.css",
+    "static/js/2.0797bc12.chunk.js": "/refuge-soundboard/static/js/2.0797bc12.chunk.js",
+    "static/js/2.0797bc12.chunk.js.map": "/refuge-soundboard/static/js/2.0797bc12.chunk.js.map",
+    "index.html": "/refuge-soundboard/index.html",
+    "precache-manifest.753fd23d31a3ef73cd30ebdcd2493579.js": "/refuge-soundboard/precache-manifest.753fd23d31a3ef73cd30ebdcd2493579.js",
+    "service-worker.js": "/refuge-soundboard/service-worker.js",
+    "static/css/2.990444bb.chunk.css.map": "/refuge-soundboard/static/css/2.990444bb.chunk.css.map",
+    "static/css/main.649456db.chunk.css.map": "/refuge-soundboard/static/css/main.649456db.chunk.css.map",
+    "static/media/blueprint-icons.css": "/refuge-soundboard/static/media/icons-20.90247cfd.ttf"
   }
 }
