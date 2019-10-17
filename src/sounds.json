@@ -1,51 +1,27 @@
 [
     {
-        "src": "Access Denied.m4a",
-        "colour": "#a0bfa2"
-    },
-    {
-        "src": "Australia Day.m4a",
-        "colour": "#5d94a1"
-    },
-    {
-        "src": "Beths Theme- Broadchurch.m4a",
-        "colour": "#2f649c"
-    },
-    {
-        "src": "Blackout.m4a",
-        "colour": "#1f4b99"
-    },
-    {
-        "src": "Calais 2037.m4a",
-        "colour": "#ccd3a1"
+        "src": "Life after the Fires Soundscape.m4a",
+        "colour": "#ffe39f"
     },
     {
         "src": "Dawn at Round Hill Soundscape.m4a",
         "colour": "#e5dba0"
     },
     {
-        "src": "Homecoming.m4a",
-        "colour": "#5088a0"
-    },
-    {
-        "src": "Life after the Fires Soundscape.m4a",
-        "colour": "#ffe39f"
+        "src": "Calais 2037.m4a",
+        "colour": "#ccd3a1"
     },
     {
         "src": "Main Theme- Broadchurch.m4a",
         "colour": "#b5c9a2"
     },
     {
-        "src": "Melaleuca Swamp Soundscape.m4a",
-        "colour": "#447c9f"
+        "src": "Access Denied.m4a",
+        "colour": "#a0bfa2"
     },
     {
         "src": "Mobile Devices.m4a",
         "colour": "#8db5a2"
-    },
-    {
-        "src": "New Zoning Laws.m4a",
-        "colour": "#27589b"
     },
     {
         "src": "Pindaroi Forest Soundscape.m4a",
@@ -56,7 +32,31 @@
         "colour": "#6b9fa1"
     },
     {
+        "src": "Australia Day.m4a",
+        "colour": "#5d94a1"
+    },
+    {
+        "src": "Homecoming.m4a",
+        "colour": "#5088a0"
+    },
+    {
+        "src": "Melaleuca Swamp Soundscape.m4a",
+        "colour": "#447c9f"
+    },
+    {
         "src": "Travel Approved.m4a",
         "colour": "#39709e"
+    },
+    {
+        "src": "Beths Theme- Broadchurch.m4a",
+        "colour": "#2f649c"
+    },
+    {
+        "src": "New Zoning Laws.m4a",
+        "colour": "#27589b"
+    },
+    {
+        "src": "Blackout.m4a",
+        "colour": "#1f4b99"
     }
 ]
