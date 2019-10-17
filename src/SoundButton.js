@@ -58,7 +58,7 @@ export default class SoundButton extends React.Component {
             ? { display: 'block' }
             : { display: 'none' }
         }>
-        {/* <Spinner /> */}
+        <Spinner />
       </div>
     </div>
   }
