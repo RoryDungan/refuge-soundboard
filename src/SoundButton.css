@@ -1,4 +1,24 @@
 .SoundButton {
-    flex: 1 1 auto;
+    flex: 1 0 auto;
     margin: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: initial;
+    }
+    100% {
+        background-color: green;
+    }
+    0% {
+        background-color: initial;
+    }
+}
+
+.SoundButton > .Spinner {
+    flex: 0 1 auto;
+    position: absolute;
 }
