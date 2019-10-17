@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './SoundButton.css'
+
 export const ButtonStates = Object.freeze({
   inactive: 0,
   loading: 1,
@@ -12,12 +14,10 @@ export const ButtonStates = Object.freeze({
 export default class SoundButton extends React.Component {
   render () {
     return <div
-      className='bp3-card bp3-elevation-1 bp3-interactive'
+      className='SoundButton bp3-card bp3-elevation-2 bp3-interactive'
       style={{
-        flex: '1 1 auto',
-        margin: '10px',
-        backgroundColor: this.props.state === ButtonStates.playing
-          ? 'green' : 'gray'
+        // backgroundColor: this.props.state === ButtonStates.playing
+        //   ? 'green' : 'gray'
       }}
       onClick={() => {
         this.props.play()

@@ -3,6 +3,8 @@ import React from 'react'
 import SoundButton, { ButtonStates } from './SoundButton'
 import sounds from './sounds.json'
 
+import './SoundBoard.css'
+
 const separateIntoChunks = (chunkSize, arr) => {
   if (chunkSize <= 0) {
     throw new Error('chunkSize must be a positive integer')
@@ -88,11 +90,11 @@ export default class SoundBoard extends React.Component {
       />
 
     const createButtonRow = (srcs, id) =>
-      <div key={id} style={{ display: 'flex ' }}>
+      <div key={id} className='ButtonRow'>
         {srcs.map(createSoundButton)}
       </div>
 
-    return <div>
+    return <div className='SoundBoard'>
       <audio ref={element => {
         if (!element) {
           return
