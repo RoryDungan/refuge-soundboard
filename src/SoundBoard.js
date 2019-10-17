@@ -18,7 +18,7 @@ const separateIntoChunks = (chunkSize, arr) => {
   return result
 }
 
-const tracks = separateIntoChunks(5, sounds.map(s => s.src))
+const trackGroups = separateIntoChunks(5, sounds)
 // const tracks = [
 //   ['XXYYXX - XXYYXX - 01 About You.mp3', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav'],
 //   ['XXYYXX - XXYYXX - 02 Good Enough.mp3', 'Cowbell.wav', 'Cowbell.wav', 'Cowbell.wav'],
@@ -76,10 +76,11 @@ export default class SoundBoard extends React.Component {
   }
 
   render () {
-    const createSoundButton = src =>
+    const createSoundButton = ({ src, colour }) =>
       <SoundButton
         key={src}
         play={() => this.playAudio(src)}
+        colour={colour}
         state={
           this.state.activeTrack === src
             ? this.state.loading
@@ -89,9 +90,9 @@ export default class SoundBoard extends React.Component {
         }
       />
 
-    const createButtonRow = (srcs, id) =>
+    const createButtonRow = (track, id) =>
       <div key={id} className='ButtonRow'>
-        {srcs.map(createSoundButton)}
+        {track.map(createSoundButton)}
       </div>
 
     return <div className='SoundBoard'>
@@ -103,7 +104,7 @@ export default class SoundBoard extends React.Component {
         this.audioElement = element
       }} />
 
-      {tracks.map(createButtonRow)}
+      {trackGroups.map(createButtonRow)}
 
     </div>
   }

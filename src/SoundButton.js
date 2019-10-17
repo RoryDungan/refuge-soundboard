@@ -9,25 +9,30 @@ export const ButtonStates = Object.freeze({
   playing: 2
 })
 
+let id = 0
+const getId = () => id++
+
 /**
  * Button that plays a sound.
  */
 export default class SoundButton extends React.Component {
   render () {
+    const id = getId()
+
     return <div
       className='SoundButton bp3-card bp3-elevation-2 bp3-interactive'
       style={
         this.props.state === ButtonStates.playing
-          ? { animation: 'pulse 1s ease-out 0s alternate infinite' }
+          ? { animation: `SoundButton_pulse_${id} 1s ease-out 0s alternate infinite` }
           : {}
       }
       onClick={() => {
         this.props.play()
       }} >
       <style>{`
-        @keyframes pulse {
+        @keyframes SoundButton_pulse_${id} {
           0% {
-            background-color: initial;
+            background-color: rgb(48, 64, 77);
           }
           100% {
             background-color: ${this.props.colour || 'red'}
@@ -41,7 +46,7 @@ export default class SoundButton extends React.Component {
             ? { display: 'block' }
             : { display: 'none' }
         }>
-        <Spinner />
+        {/* <Spinner /> */}
       </div>
     </div>
   }
