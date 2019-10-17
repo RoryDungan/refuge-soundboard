@@ -9,6 +9,9 @@ import './App.css'
 function App () {
   return (
     <div className="App bp3-dark">
+      <header>
+        <h1 className="bp3-heading">Refuge Aural Moodboard</h1>
+      </header>
       <SoundBoard />
     </div>
   )
