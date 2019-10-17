@@ -6,18 +6,6 @@
     justify-content: center;
 }
 
-@keyframes pulse {
-    0% {
-        background-color: initial;
-    }
-    100% {
-        background-color: green;
-    }
-    0% {
-        background-color: initial;
-    }
-}
-
 .SoundButton > .Spinner {
     flex: 0 1 auto;
     position: absolute;

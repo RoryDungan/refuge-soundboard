@@ -24,17 +24,25 @@ export default class SoundButton extends React.Component {
       onClick={() => {
         this.props.play()
       }} >
-      {
-        <div
-          className='Spinner'
-          style={
-            this.props.state === ButtonStates.loading
-              ? { display: 'block' }
-              : { display: 'none' }
-          }>
-          <Spinner />
-        </div>
-      }
+      <style>{`
+        @keyframes pulse {
+          0% {
+            background-color: initial;
+          }
+          100% {
+            background-color: ${this.props.colour || 'red'}
+          }
+        }
+      `}</style>
+      <div
+        className='Spinner'
+        style={
+          this.props.state === ButtonStates.loading
+            ? { display: 'block' }
+            : { display: 'none' }
+        }>
+        <Spinner />
+      </div>
     </div>
   }
 }
